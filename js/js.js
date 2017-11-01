@@ -17,3 +17,28 @@ $(function() {
 	});
 
 });
+
+$(function() {
+
+	$('.js-popup-modal').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		showCloseBtn: false,
+		mainClass: 'popup-modal-overlay'
+	});
+
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+});
+
+$(function() {
+
+	$('.js-submenu-btn').click(function(){
+		$(this).toggleClass('_open');
+		return false;
+	});
+
+});
+

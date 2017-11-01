@@ -406,7 +406,7 @@ img{
 		height: 55px;
 		background: #fff;
 		border-top: 1px solid #e6e7f4;
-		z-index: 9;
+		z-index: 1044;
 	}
 	list-style: none;
 	margin: 0 -7px;
@@ -452,12 +452,42 @@ img{
 	list-style: none;
 	&__item{
 		border-bottom: 1px solid #dadfee;
+		position: relative;
 	}
 	&__link{
 		padding: 15px;
 		font-size: 15px;
 		color: #7d87a4;
 		display: block;
+	}
+	&__arrow{
+		position: absolute;
+		right: 0;
+		height: 48px;
+		line-height: 46px;
+		width: 48px;
+		border: 0 none;
+		background: none;
+		margin: 0;
+		padding: 2px 0 0;
+		font-size: 15px;
+		span{
+			position: relative;
+			transform: rotate(0deg);
+			display: inline-block;
+			.trn;
+		}
+		& + .sidebar-menu__link{
+			margin-right: 55px;
+		}
+		&._open{
+			span{
+				transform: rotate(180deg);
+			}
+			& ~ .sidebar-submenu{
+				display: block;
+			}
+		}
 	}
 }
 
@@ -467,10 +497,81 @@ img{
 	list-style: none;
 	background: #fcfcfc;
 	border-top: 1px solid #dadfee;
+	display: none;
 	&__link{
 		padding: 7px 10px 7px 25px;
 		font-size: 13px;
 		color: #7d87a4;
 		display: block;
+	}
+}
+
+.popup-block{
+	width: 300px;
+	margin: 0 auto;
+	&__body{
+		padding: 60px 10px;
+		background: #fff;
+		position: relative;
+		text-align: center;
+	}
+}
+
+.mfp-bg.popup-modal-overlay{
+	background: rgba(11, 29, 88, 0.5);
+	opacity: 1;
+}
+
+.popup-modal-dismiss{
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 15px;
+	color: #6d7990;
+}
+
+.popup-modal-dismiss.blue-btn {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.popup{
+	p{
+		margin-bottom: 10px;
+	}
+	.h2{
+		font-size: 22px;
+		color: #6d7990;
+		text-transform: normal;
+	}
+	&__subtitle{
+		color: #a4afc4;
+		font-size: 14px;
+	}
+	&__phone{
+		font-size: 36px;
+		line-height: 1.1;
+		margin-top: 25px;
+		a{
+			color: #6d7990;
+		}
+	}
+	&__worktime{
+		color: #a4afc4;
+		font-size: 14px;
+	}
+	&__mail{
+		color: #a4afc4;
+		font-size: 16px;
+		margin-top: 40px;
+	}
+	&__mail-link{
+		font-size: 24px;
+		line-height: 1.1;
+		a{
+			color: #7d87a4;
+		}
 	}
 }
