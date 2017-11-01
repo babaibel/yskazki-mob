@@ -57,7 +57,7 @@
 
 		<main class="main">
 			<div class="wrap">
-				<div class="catalog-wr">
+				<div class="catalog-wr js-catalog-wr">
 					<div class="catalog-top">
 						<form>
 							<div class="catalog-filter">
@@ -72,17 +72,17 @@
 									<input type="submit" name="" value="Фильтровать" class="btn btn--b-blue">
 								</div>
 							</div>
-							<div class="catalog-view">
-								<a class="catalog-view__item">
+							<div class="catalog-view js-catalog-view">
+								<a class="catalog-view__item" data-view="list">
 									<span class="icon-cat-list"></span>
 								</a>
-								<a class="catalog-view__item _active">
+								<a class="catalog-view__item _active" data-view="tile">
 									<span class="icon-cat-tile"></span>
 								</a>
 							</div>
 						</form>
 					</div>
-					<div class="catalog catalog--tile">
+					<div class="catalog catalog--tile js-catalog">
 						<div class="catalog-item">
 							<a href="#!" class="catalog-item__desk">
 								<div class="catalog-item__thumb">
@@ -93,7 +93,7 @@
 								</div>
 								<div class="catalog-item__info">
 									<h4 class="catalog-item__title">
-										Детский круглый бассейн c длинным именем
+										Детский круглый бассейн
 									</h4>
 									<ul class="catalog-item__list">
 										<li>1 шт. <span>2300 р.</span></li>

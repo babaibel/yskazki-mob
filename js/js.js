@@ -42,3 +42,26 @@ $(function() {
 
 });
 
+$(function() {
+
+	var $catalogWr = $('.js-catalog-wr');
+	if(!$catalogWr.length) return;
+
+	var $catalog = $catalogWr.find('.js-catalog'),
+		$catalogViewLinks = $catalogWr.find('.js-catalog-view a');
+
+	$catalogViewLinks.click(function(){
+		var $this = $(this),
+			thisView = $this.data('view');
+
+		$catalogViewLinks.not(this).removeClass('_active');
+		$this.addClass('_active');
+		if(thisView == "list"){
+			$catalog.removeClass('catalog--tile');
+		} else{
+			$catalog.addClass('catalog--tile');
+		}
+	});
+
+});
+
