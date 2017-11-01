@@ -3,6 +3,24 @@ var $W = $(window),
 	$H = $('html'),
 	$B = $('body');
 
+	$(function(){
+
+	function qty(val){
+		pqty = $('#prdqty').val();
+		if (val == "plus") {
+		      var newVal = parseFloat(pqty) + 1;
+		    } else {
+		    if (pqty > 1) {
+		      var newVal = parseFloat(pqty) - 1;
+		    } else {
+		      newVal = 1;
+		    }
+		}
+		$('#prdqty').val(newVal);
+	}
+
+});
+
 $(function() {
 
 	var slideout = new Slideout({
@@ -17,3 +35,22 @@ $(function() {
 	});
 
 });
+
+$(function(){
+	var $jsTabsWr = $('.js-tabs-wr ');
+	if(!$jsTabsWr.length) return;
+
+	var $jsTabs = $jsTabsWr.find('.js-tabs a'),
+		$jsTabCont = $jsTabsWr.find('.js-tab-cont > div');
+
+    $jsTabs.click(function(){
+	    $jsTabCont.addClass('hide');
+	    $jsTabs.parent().removeClass('active');
+	    
+	    var id = $(this).attr('href');
+	    $(id).removeClass('hide');
+	    $(this).parent().addClass('active');
+	    return false;
+  });
+});
+
