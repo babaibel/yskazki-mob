@@ -8,9 +8,9 @@ var $W = $(window),
 
 		$(this).each(function () {
 			var $countMinus = $(this).find('.js-count-minus'),
-					$countPluse = $(this).find('.js-count-pluse'),
-					$countText = $(this).find('.js-count-text'),
-					countVal;
+				$countPluse = $(this).find('.js-count-pluse'),
+				$countText = $(this).find('.js-count-text'),
+				countVal;
 
 			$countMinus.click(function(){
 				countVal = $countText.val();
@@ -36,10 +36,10 @@ var $W = $(window),
 })(jQuery);
 
 $(function () {
-		var $count = $('.js-count');
-		if(!$count.length) return;
+	var $count = $('.js-count');
+	if(!$count.length) return;
 
-		$count.count({});
+	$count.count({});
 });
 
 $(function() {
@@ -141,5 +141,41 @@ $(function() {
 		return false;
 	});
 
+	$('.js-catalog-item-del').click(function(){
+		$(this).closest('.catalog-item').slideUp();
+		return false;
+	});
+
 });
 
+(function ($) {
+	$.fn.inputEdit = function () {
+
+		$(this).each(function () {
+			var $inputEditBtn = $(this).find('.js-input-edit-btn'),
+				$inputEditLabel = $(this).find('.js-input-edit-label'),
+				$inputEditLabelField = $inputEditLabel.find('input'),
+				$inputEditLabelText = $inputEditLabel.find('span'),
+				inputEditVal;
+
+			$inputEditBtn.click(function(){
+				if ($inputEditLabel.hasClass('_edit')){
+					inputEditVal = $inputEditLabelField.val();
+					$inputEditLabelText.text(inputEditVal);
+					$inputEditLabel.removeClass('_edit');
+				} else{
+					$inputEditLabel.addClass('_edit');
+				}
+				return false;
+			});
+
+		})
+	};
+})(jQuery);
+
+$(function () {
+	var $inputEdit = $('.js-input-edit');
+	if(!$inputEdit.length) return;
+
+	$inputEdit.inputEdit({});
+});
