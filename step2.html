@@ -46,66 +46,62 @@
 			</div>
 		</header>
 
-		<nav class="breadcrumbs-wr">
-			<div class="wrap">
-				<a href="#!" class="breadcrumbs">
-					<span class="breadcrumbs__arr icon-arr-left"></span>
-					<span class="breadcrumbs__text">Подтверждение заказа</span>
-				</a>
-			</div>
-		</nav>
-
 		<div class="order-steps-wr">
 			<div class="wrap">
 				<div class="order-steps">
 					<div class="order-steps__progress">
 						<ul class="order-progress">
-							<li class="order-progress__item _active"><span>Контакты</span></li>
-							<li class="order-progress__item"><span>Доставка</span></li>
+							<li class="order-progress__item"><span>Контакты</span></li>
+							<li class="order-progress__item _active"><span>Доставка</span></li>
 							<li class="order-progress__item"><span>Оплата</span></li>
 						</ul>
 					</div>
 					<div class="order-steps__form">
 						<form>
-							<div class="tab-wr js-tabs-wr">
-								<ul class="tab-list js-tabs">
-									<li class="tab-list__item active"><a href="#tab_1" class="tab-list__link active">Частное лицо</a></li>
-									<li class="tab-list__item"><a href="#tab_2" class="tab-list__link">Компания</a></li>
-								</ul>
-								<div class="box-tab js-tab-cont">
-									<div class="tab-cont" id="tab_1">
-										<div class="form">
-											<div class="form-group form-group--text-fields">
-												<div class="form__row">
-													<input class="text-field" type="text" placeholder="Фамилия"></input>
-												</div>
-												<div class="form__row">
-													<input class="text-field" type="text" placeholder="Имя"></input>
-												</div>
-												<div class="form__row">
-													<input class="text-field error" type="text" placeholder="Отчество"></input>
-												</div>
-											</div>
+							<div class="form">
+								<div class="form-group">
+									<div class="form__row">
+										<label class="radio">
+											<input type="radio" name="radio" checked hidden class="radio__input"/>
+											<span class="radio__clone"></span>
+											<span class="radio__label">Доставка по адресу</span>
+										</label>
+									</div>
+									<div class="form__row">
+										<label class="radio">
+											<input type="radio" name="radio" hidden class="radio__input"/>
+											<span class="radio__clone"></span>
+											<span class="radio__label">Самовывоз</span>
+										</label>
+									</div>
+									<div class="form__row">
+										<label class="radio">
+											<input type="radio" name="radio" disabled hidden class="radio__input"/>
+											<span class="radio__clone"></span>
+											<span class="radio__label">Недоступный пункт</span>
+										</label>
+									</div>
+								</div>
+								<div class="form-group form-group--text-fields">
+									<div class="form__row">
+										<input class="text-field" type="text" placeholder="Город"></input>
+									</div>
+									<div class="form__row">
+										<input class="text-field" type="text" placeholder="Улица"></input>
+									</div>
+									<div class="form__row form__row--cols2">
+										<div class="form__col">
+											<input class="text-field" type="text" placeholder="Дом"></input>
+										</div>
+										<div class="form__col">
+											<input class="text-field" type="text" placeholder="Квартира"></input>
 										</div>
 									</div>
-									<div class="tab-cont hide" id="tab_2">
-										<div class="form-group form-group--text-fields">
-											<div class="form">
-												<div class="form__row">
-													<input class="text-field" type="text" placeholder="Название компании"></input>
-												</div>
-												<div class="form__row">
-													<input class="text-field" type="text" placeholder="ИНН"></input>
-												</div>
-												<div class="form__row">
-													<input class="text-field" type="text" placeholder="КПП"></input>
-												</div>
-											</div>
-										</div>
+									<div class="form__row">
+										<button class="next-btn">Далее <span class="next-btn__arr icon-arr-right"></span></button>
 									</div>
 								</div>
 							</div>
-							<button class="next-btn">Далее <span class="next-btn__arr icon-arr-right"></span></button>
 						</form>
 					</div>
 				</div>

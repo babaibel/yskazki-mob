@@ -46,46 +46,91 @@
 			</div>
 		</header>
 
-		<div class="steps-wr">
-			<ul class="steps">
-				<li class="steps__item active"><span>Контакты</span></li>
-				<li class="steps__item"><span>Доставка</span></li>
-				<li class="steps__item"><span>Оплата</span></li>
-			</ul>
+		<div class="order-steps-wr">
+			<div class="wrap">
+				<div class="order-steps">
+					<div class="order-steps__progress">
+						<ul class="order-progress">
+							<li class="order-progress__item"><span>Контакты</span></li>
+							<li class="order-progress__item _active"><span>Доставка</span></li>
+							<li class="order-progress__item"><span>Оплата</span></li>
+						</ul>
+					</div>
+					<div class="order-steps__form">
+						<form>
+							<div class="form">
+								<div class="form-group">
+									<div class="form__row">
+										<label class="radio">
+											<input type="radio" name="radio" checked hidden class="radio__input"/>
+											<span class="radio__clone"></span>
+											<span class="radio__label">Доставка по адресу</span>
+										</label>
+									</div>
+									<div class="form__row">
+										<label class="radio">
+											<input type="radio" name="radio" hidden class="radio__input"/>
+											<span class="radio__clone"></span>
+											<span class="radio__label">Самовывоз</span>
+										</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="form__row form__row--cols2">
+										<div class="form__col">
+											<label class="checkbox">
+												<input type="radio" name="checkbox" checked hidden class="checkbox__input"/>
+												<span class="checkbox__clone icon-checked"></span>
+												<span class="checkbox__label">Краснодар. Фурманова 2/3</span>
+											</label>
+										</div>
+										<div class="form__col">
+											<label class="checkbox">
+												<input type="radio" name="checkbox"  hidden class="checkbox__input"/>
+												<span class="checkbox__clone icon-checked"></span>
+												<span class="checkbox__label">Краснодар. Фурманова 2/3</span>
+											</label>
+										</div>
+										<div class="form__col">
+											<label class="checkbox">
+												<input type="radio" name="checkbox"  hidden class="checkbox__input"/>
+												<span class="checkbox__clone icon-checked"></span>
+												<span class="checkbox__label">Краснодар. Фурманова 2/3</span>
+											</label>
+										</div>
+										<div class="form__col">
+											<label class="checkbox">
+												<input type="radio" name="checkbox" disabled hidden class="checkbox__input"/>
+												<span class="checkbox__clone icon-checked"></span>
+												<span class="checkbox__label">Недоступный пункт</span>
+											</label>
+										</div>
+									</div>
+									<div class="form__row">
+										<button class="next-btn">Далее <span class="next-btn__arr icon-arr-right"></span></button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="order-form">
-			<form>
-				<ul class="radio-list">
-					<li>
-						<label class="radio-field"><input type="radio" name="radio" checked hidden /><i></i>Доставка по адресу</label>
-					</li>
-					<li>
-						<label class="radio-field"><input type="radio" name="radio" hidden /><i></i>Самовывоз</label>
-					</li>
-				</ul>
 
-				<ul class="checkbox-list">
-					<li class="checkbox-list__item">
-						<label class="checkbox-field"><input type="checkbox" name="checkbox" hidden /><i></i>Краснодар.<br>Фурманова 2/3</label>
-					</li>
-					<li class="checkbox-list__item">
-						<label class="checkbox-field"><input type="checkbox" name="checkbox" hidden /><i></i>Краснодар.<br>Фурманова 2/3</label>
-					</li>
-					<li class="checkbox-list__item">
-						<label class="checkbox-field"><input type="checkbox" name="checkbox" hidden /><i></i>Краснодар.<br>Фурманова 2/3</label>
-					</li>
-					<li class="checkbox-list__item">
-						<label class="checkbox-field"><input type="checkbox" name="checkbox" hidden /><i></i>Краснодар.<br>Фурманова 2/3</label>
-					</li>
-				</ul>
+		<footer class="footer-wr">
+			<div class="wrap">
+				<div class="footer">
+					<p class="footer__link">
+						<a href="#" class="link link--blue">Договор-оферта</a>
+					</p>
+					<p class="footer__copy">
+						Компания "Приглашаем в сказку" <br>
+						1995-2016 &copy; Все права защищены
+					</p>
+				</div>
+			</div>
+		</footer>
 
-
-
-				<button class="next-btn">Далее <span class="next-btn__arr icon-arr-right"></span></button>
-			</form>
-		</div>
-
-		
 	</div>
 
 	<nav id="menu" class="sidebar-nav">
@@ -156,40 +201,64 @@
 		</div>
 	</nav>
 
-	<!-- <div id="callbacks-modal" class="popup-block mfp-hide">
-		<div class="popup-block__body cleara">
+	<nav class="footer-nav-wr">
+		<div class="wrap">
+			<ul class="footer-nav">
+				<li class="footer-nav__item">
+					<a href="#!" class="footer-nav__link">
+						<span class="footer-nav__icon icon-menub1"></span>
+						<span class="footer-nav__text">Каталог</span>
+					</a>
+				</li>
+				<li class="footer-nav__item">
+					<a href="#!" class="footer-nav__link">
+						<span class="footer-nav__icon icon-search"></span>
+						<span class="footer-nav__text">Поиск</span>
+					</a>
+				</li>
+				<li class="footer-nav__item">
+					<a href="#!" class="footer-nav__link">
+						<span class="footer-nav__icon icon-heart"></span>
+						<span class="footer-nav__text">Избранное</span>
+					</a>
+				</li>
+				<li class="footer-nav__item">
+					<a href="#!" class="footer-nav__link">
+						<span class="footer-nav__icon icon-user"></span>
+						<span class="footer-nav__text">Профиль</span>
+					</a>
+				</li>
+				<li class="footer-nav__item">
+					<a href="#!" class="footer-nav__link">
+						<span class="footer-nav__icon icon-cart"></span>
+						<span class="footer-nav__text">Корзина</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="contacts-modal" class="popup-block mfp-hide">
+		<div class="popup-block__body">
 			<span class="popup-modal-dismiss icon-cross"></span>
-			<h2 class="h2-popup-title">Заказ обратного <br/> звонка</h2>
-			<div class="call-form cleara">
-				<form class="js-form" data-title="Спасибо!" data-text="Скоро мы вам перезвоним!">
-					<div class="call-form__row cleara">
-						<div class="call-form__block">
-							<span class="call-form-label">Ваше имя</span>
-							<input class="call-form-field rfield" id="name" name="name" type="text" placeholder="">
-						</div>
-						<div class="call-form__block">
-							<span class="call-form-label">Номер телефона</span>
-							<input class="call-form-field rfield" id="phone" name="phone" type="text" placeholder="">
-						</div>
-					</div>
-					<div class="call-form__row center">
-						<input class="blue-btn call-form-btn" type="submit" value="Заказать звонок">
-					</div>
-				</form>
+			<div class="popup">
+				<h2 class="h2">Возникли вопросы?</h2>
+				<p class="popup__subtitle">Свяжитесь с нашей службой <br>поддержки по телефону:</p>
+				<p class="popup__phone">
+					<a href="tel:8-800-500-74-05">8-800-500-74-05</a>
+				</p>
+				<p class="popup__worktime">
+					Время работы: 9:00 - 18:00
+				</p>
+				<p class="popup__mail">
+					Или напишите на почту:
+				</p>
+				<p class="popup__mail-link">
+					<a href="mailto:">zakaz@y-skazki.ru</a>
+				</p>
 			</div>
 		</div>
 	</div>
-
-	<div id="after-modal" class="popup-block mfp-hide">
-		<div class="popup-block__body cleara">
-			<span class="popup-modal-dismiss icon-cross"></span>
-			<div class="h2-popup-title js-popup-title">Спасибо!</div>
-			<div class="popup-text js-popup-text"></div>
-			<div class="center">
-				<div class="blue-btn popup-modal-dismiss">понятно</div>
-			</div>
-		</div>
-	</div> -->
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/slideout.min.js"></script>

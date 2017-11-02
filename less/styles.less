@@ -292,7 +292,7 @@ img{
 	align-items: center;
 	margin: 0 -10px;
 	&-wr{
-		border-bottom: 1px solid #e4e8f5;
+		border-bottom: 1px solid #dadfee;
 	}
 	.phone-btn{
 		font-size: 0;
@@ -801,6 +801,7 @@ img{
 	color: #7d87a4;
 	width: 100%;
 	padding: 0 10px;
+	background-color: #fff;
 	option{
 		background: #7d87a4;
 		color: #ffffff;
@@ -814,33 +815,39 @@ img{
 	}
 }
 
-.steps{
+.order-steps{
 	&-wr{
-		position: relative;
-		border-bottom: 1px solid #dadfee;
-		border-top: 1px solid #dadfee;
-		padding: 0 15px;
-		z-index: 2;
-		&:after{
-				content: '';
-				display: block;
-				height: 4px;
-				width: auto;
-				border-radius: 3px;
-				background-color: #7d87a4;
-				position: absolute;
-				left: 15px;
-				right: 15px;
-				top: 33px;
-		}
+		margin-bottom: 40px;
 	}
+	&__form{
+		margin-top: 15px; 
+	}
+}
+
+.order-progress{
+	position: relative;
+	border-bottom: 1px solid #dadfee;
+	z-index: 2;
+	margin: 0 -15px;
+	padding: 0 15px;
 	list-style: none;
-	margin: 0;
-	padding: 0;
 	height: 54px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	&:after{
+		content: '';
+		display: block;
+		height: 4px;
+		width: auto;
+		border-radius: 3px;
+		background-color: #7d87a4;
+		position: absolute;
+		left: 15px;
+		right: 15px;
+		top: 33px;
+	}
 
 	&__item{
 		text-align: center;
@@ -849,6 +856,7 @@ img{
 		font-size: 0;
 		display: block;
 		z-index: 3;
+		min-width: 60px;
 
 		span{
 			position: relative;
@@ -860,19 +868,20 @@ img{
 			&:after{
 				content: '';
 				display: block;
-				width: 13px;
-				height: 13px;
+				width: 12px;
+				height: 12px;
 				border: 3px solid #7d87a4;
 				border-radius: 50%;
 				position: absolute;
 				bottom: -22px;
 				left: 50%;
-				margin-left: -8px;
+				margin-left: -9px;
 				background-color: #7d87a4;
+				.trn;
 			}
 		}
 
-		&.active{
+		&._active{
 			span{
 				&:after{
 					background-color: #fff;
@@ -883,8 +892,6 @@ img{
 }
 
 .tab-wr {
-	padding: 0 15px;
-	margin-bottom: 40px;
 	.box-tab {
 		.tab-cont {
 			&.hide {
@@ -898,7 +905,7 @@ img{
 		justify-content: center;
 		align-items: center;
 		font-size: 14px;
-		margin: 15px 0 30px;
+		margin: 0 0 30px;
 		padding: 0;
 		&__item {
 			display: block;
@@ -933,6 +940,40 @@ img{
 	}
 }
 
+.form{
+	&-group{
+		margin-top: 35px;
+		&--text-fields{
+			.form__row{
+				margin-bottom: 30px;
+			}
+		}
+	}
+	&__row{
+		margin-bottom: 20px;
+		&--cols2{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.form__col{
+				width: 48%;
+				margin-bottom: 4%;
+				.checkbox{
+					height: 100%;
+					&__label{
+						min-height: 100%;
+					}
+				}
+			}
+		}
+		&-title{
+			color: #6d7990;
+			margin-bottom: 3px;
+			font-size: 14px;
+		}
+	}
+}
+
 .text-field{
 	display: block;
 	width: 100%;
@@ -941,7 +982,34 @@ img{
 	border: 0;
 	border-bottom: 1px solid #dadfee;
 	color: #6d7990;
-	margin: 0 0 30px;
+	&::placeholder{
+		color: #6d7990;
+		opacity: 1;
+	}
+	&:focus{
+		&::placeholder{
+			opacity: 0;
+		}
+	}
+	&.error{
+		border-color: #ff3a56;
+		color: #ff3a56;
+		&::placeholder{
+			color: #ff3a56;
+		}
+	}
+}
+
+.textarea{
+	display: block;
+	width: 100%;
+	font-size: 13px;
+	line-height: 1.2;
+	padding: 10px;
+	min-height: 130px;
+	resize: vertical;
+	border: 1px solid #dadfee;
+	color: #6d7990;
 }
 
 .next-btn{
@@ -953,10 +1021,14 @@ img{
 	text-align: center;
 	border: 1px solid #dadfee;
 	color: #6d7990;
-	margin: 40px 0 0;
+	margin: 35px 0 0;
 	background: #fff;
 	position: relative;
 	padding: 0 35px;
+
+	.form__row &{
+		margin-top: 0;
+	}
 
 	&__arr{
 		font-size: 17px;
@@ -972,87 +1044,103 @@ input[type="radio"] {
 	display:none;
 }
 
-.radio-list{
-	list-style: none;
-	padding: 0;
-	margin: 0 0 30px;
-	li{
-		margin-bottom: 22px;
-	}
-	.radio-field{
-		font-size: 14px;
-		line-height: 20px;
-		color: #7d87a4;
-		cursor: pointer;
-		display: block;
-	}
 
-	.radio-field > input[type="radio"] + i:before{
-		content: "";
-		display: inline-block;
-		vertical-align: middle;
-		height: 18px;
-		width: 18px;
-		margin: 0 5px 0 0;
-		background: #fff;
-		border-radius: 50%;
-		border: 1px solid #dbe0ee;
-		box-shadow: inset 0 0 0 3px #fff;
-	}
-
-	.radio-field > input[type="radio"]:checked + i:before{
-	 background: #7d87a4;
-	}
-
-	.radio-field > input[type="radio"]:disabled + i:before,
-	.radio-field > input[type="radio"]:checked:disabled + i:before {
-		opacity: 0.7;
+.radio{
+	font-size: 14px;
+	line-height: 20px;
+	color: #7d87a4;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	padding-left: 28px;
+	&__input{
+		& + .radio__clone{
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 20px;
+			width: 20px;
+			background: #fff;
+			border-radius: 50%;
+			border: 1px solid #dbe0ee;
+			.trn;
+			&:before{
+				content: "";
+				position: absolute;
+				top: 3px;
+				left: 3px;
+				height: 12px;
+				width: 12px;
+				border-radius: 50%;
+				background: #7d87a4;
+				opacity: 0;
+				.trn;
+			}
+		}
+		&:checked{
+			& + .radio__clone{
+				&:before{
+					opacity: 1;
+				}
+			}
+		}
+		&:disabled{
+			& + .radio__clone{
+				&:before{
+					background: #dadfee;
+				}
+			}
+			& ~ .radio__label{
+				color: #dadfee;
+			}
+		}
 	}
 }
 
-.checkbox-list{
-	list-style: none;
-	padding: 0;
-	margin: 0 -11px 30px;
-	display: flex;
-	justify-content: space-between;
-	align-items: justify-content;
-	&__item{
-		margin: 0 11px 20px;
-		width: 50%;
-	}
-
-	.checkbox-field{
-		position: relative;
-		font-size: 14px;
-		line-height: 20px;
-		color: #7d87a4;
-		cursor: pointer;
-		display: block;
-		border: 1px solid #dbe0ee;
-	}
-
-	.checkbox-field > input[type="checkbox"] + i:before{
-		content: "";
-		display: inline-block;
-		right: 0;
-		top: 0;
-		position: absolute;
-		height: 18px;
-		width: 18px;
-		margin: 0 5px 0 0;
-		background: #dbe0ee;
-		border-radius: 50%;
-		opacity: 0;
-	}
-
-	.checkbox-field > input[type="checkbox"]:checked + i:before{
-		opacity: 1;
-	}
-
-	.checkbox-field > input[type="checkbox"]:disabled + i:before,
-	.checkbox-field > input[type="checkbox"]:checked:disabled + i:before {
-		opacity: 0.7;
+.checkbox{
+	position: relative;
+	display: block;
+	&__input{
+		& ~ .checkbox__label{
+			font-size: 14px;
+			line-height: 20px;
+			padding: 16px 12px;
+			color: #7d87a4;
+			cursor: pointer;
+			display: block;
+			border: 1px solid #dbe0ee;
+			.trn;
+		}
+		& + .checkbox__clone{
+			position: absolute;
+			right: 6px;
+			top: 5px;
+			height: 16px;
+			width: 16px;
+			font-size: 16px;
+			color: #fff;
+			opacity: 0;
+			.trn;
+		}
+		&:checked{
+			& + .checkbox__clone{
+				opacity: 1;
+			}
+			& ~ .checkbox__label{
+				background: #7d87a4;
+				color: #fff;
+			}
+		}
+		&:disabled{
+			& + .checkbox__clone{
+				&:before{
+					background: #dadfee;
+				}
+			}
+			& ~ .checkbox__label{
+				color: #dadfee;
+			}
+		}
 	}
 }
 
