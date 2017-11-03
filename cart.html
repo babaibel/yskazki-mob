@@ -48,10 +48,10 @@
 
 		<nav class="breadcrumbs-wr">
 			<div class="wrap">
-				<a href="#!" class="breadcrumbs">
-					<span class="breadcrumbs__arr icon-arr-left"></span>
-					<span class="breadcrumbs__text">Корзина</span>
-				</a>
+				<div class="breadcrumbs">
+					<a href="#!" class="breadcrumbs__arr icon-arr-left"></a>
+					<h1 class="breadcrumbs__text">Корзина</h1>
+				</div>
 			</div>
 		</nav>
 
@@ -245,14 +245,15 @@
 						</div>
 					</div>
 				</div>
-				<!-- todo -->
-				<!-- <div class="cart-end">
+				<div class="cart-end">
 					<div class="cart-end__price">
-						Итого:
-						145 000 Р
+						<span class="cart-end__price-left">
+							Итого:
+						</span>
+						<span class="cart-end__price-right"><b>145 000</b> Р</span>
 					</div>
-					<button class="cart-end__btn"></button>
-				</div> -->
+					<button class="cart-end__btn btn btn--blue" value="Оформить заказ">Оформить заказ</button>
+				</div>
 			</div>
 		</main>
 
@@ -482,6 +483,5 @@
 	<script type="text/javascript" src="js/slideout.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/js.js"></script>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>

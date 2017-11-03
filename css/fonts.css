@@ -19,11 +19,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?8ztfj');
-  src:  url('../fonts/icomoon.eot?8ztfj#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?8ztfj') format('truetype'),
-    url('../fonts/icomoon.woff?8ztfj') format('woff'),
-    url('../fonts/icomoon.svg?8ztfj#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?g8azu5');
+  src:  url('../fonts/icomoon.eot?g8azu5#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?g8azu5') format('truetype'),
+    url('../fonts/icomoon.woff?g8azu5') format('woff'),
+    url('../fonts/icomoon.svg?g8azu5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -43,6 +43,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-heart-fill:before {
+  content: "\e902";
+}
 .icon-checked:before {
   content: "\e916";
 }
